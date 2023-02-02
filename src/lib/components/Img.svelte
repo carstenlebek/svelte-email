@@ -5,15 +5,15 @@
 		style?: Record<string, string | number | null>;
 		alt: string;
 		src: string;
-		width: number;
-		height: number;
+		width: string;
+		height: string;
 	}
 
 	export let style = {};
 	export let alt = '';
 	export let src = '';
-	export let width = 0;
-	export let height = 0;
+	export let width = '0';
+	export let height = '0';
 
 	const styleDefault = {
 		display: 'block',
