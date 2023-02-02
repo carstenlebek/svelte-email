@@ -1,13 +1,14 @@
 <script lang="ts">
+	import type { StandardLonghandProperties } from 'csstype';
 	import { styleToString } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	interface $$Props extends Omit<HTMLAttributes<HTMLAnchorElement>, 'style'> {
-		style?: Record<string, string | number | null>;
+		style?: StandardLonghandProperties;
 		target?: string;
 		href: string;
 	}
 
-	export let style = {};
+	export let style: $$Props['style'] = {};
 	export let target = '_blank';
 	export let href = '';
 

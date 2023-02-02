@@ -1,11 +1,12 @@
 <script lang="ts">
+	import type { StandardLonghandProperties } from 'csstype';
 	import { styleToString } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	interface $$Props extends Omit<HTMLAttributes<HTMLDivElement>, 'style'> {
-		style?: Record<string, string | number | null>;
+		style?: StandardLonghandProperties;
 	}
 
-	export let style = {};
+	export let style: $$Props['style'] = {};
 
 	const styles = { maxWidth: '37.5em', ...style };
 	const inlineStyle = styleToString(styles);

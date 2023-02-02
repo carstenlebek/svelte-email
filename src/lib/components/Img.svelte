@@ -1,15 +1,16 @@
 <script lang="ts">
+	import type { StandardLonghandProperties } from 'csstype';
 	import { styleToString } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	interface $$Props extends Omit<HTMLAttributes<HTMLImageElement>, 'style'> {
-		style?: Record<string, string | number | null>;
+		style?: StandardLonghandProperties;
 		alt: string;
 		src: string;
 		width: string;
 		height: string;
 	}
 
-	export let style = {};
+	export let style: $$Props['style'] = {};
 	export let alt = '';
 	export let src = '';
 	export let width = '0';

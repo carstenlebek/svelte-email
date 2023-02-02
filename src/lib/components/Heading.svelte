@@ -1,8 +1,9 @@
 <script lang="ts">
+	import type { StandardLonghandProperties } from 'csstype';
 	import { styleToString, withMargin } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	interface $$Props extends Omit<HTMLAttributes<HTMLHeadingElement>, 'style'> {
-		style?: Record<string, string | number | null>;
+		style?: StandardLonghandProperties;
 		as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 		m?: string;
 		mx?: string;
@@ -13,7 +14,7 @@
 		ml?: string;
 	}
 
-	export let style = {};
+	export let style: $$Props['style'] = {};
 	export let as = 'h1';
 </script>
 

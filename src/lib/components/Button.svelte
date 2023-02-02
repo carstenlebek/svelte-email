@@ -1,8 +1,9 @@
 <script lang="ts">
+	import type { StandardLonghandProperties } from 'csstype';
 	import { pxToPt, styleToString } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	interface $$Props extends Omit<HTMLAttributes<HTMLAnchorElement>, 'style'> {
-		style?: Record<string, string | number | null>;
+		style?: StandardLonghandProperties;
 		href: string;
 		target?: string;
 		pX?: number;
