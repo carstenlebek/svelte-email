@@ -1,12 +1,9 @@
 <script lang="ts">
+	import { styleToString } from '$lib/utils';
+
 	export let style: Record<string, string | number> = {};
-	let styleString = style
-		? Object.entries(style)
-				.map(([key, value]) => `${key}: ${value}`)
-				.join(';')
-		: '';
 </script>
 
-<body {...$$restProps} style={styleString}>
+<body {...$$restProps} style={styleToString(style)}>
 	<slot />
 </body>
