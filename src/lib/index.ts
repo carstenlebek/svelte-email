@@ -12,6 +12,8 @@ import Preview from './components/Preview.svelte';
 import Section from './components/Section.svelte';
 import Text from './components/Text.svelte';
 
+import { render } from './render';
+
 export {
 	Body,
 	Button,
@@ -25,5 +27,6 @@ export {
 	Link,
 	Preview,
 	Section,
-	Text
+	Text,
+	render
 };
