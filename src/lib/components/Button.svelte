@@ -3,7 +3,7 @@
 	import type { HTMLAttributes } from 'svelte/elements';
 	interface $$Props extends Omit<HTMLAttributes<HTMLAnchorElement>, 'style'> {
 		style?: Record<string, string | number | null>;
-		href?: string;
+		href: string;
 		target?: string;
 		pX?: number;
 		pY?: number;
