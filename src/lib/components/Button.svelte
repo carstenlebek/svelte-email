@@ -1,11 +1,19 @@
 <script lang="ts">
 	import { pxToPt, styleToString } from '$lib/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
+	interface $$Props extends Omit<HTMLAttributes<HTMLAnchorElement>, 'style'> {
+		style?: Record<string, string | number | null>;
+		href?: string;
+		target?: string;
+		pX?: number;
+		pY?: number;
+	}
 
-	export let href: string = '';
-	export let style: Record<string, string | number> = {};
-	export let pX: number = 0;
-	export let pY: number = 0;
-	export let target: string = '_blank';
+	export let href = '';
+	export let style = {};
+	export let pX = 0;
+	export let pY = 0;
+	export let target = '_blank';
 
 	const y = pY * 2;
 	const textRaise = pxToPt(y.toString());
