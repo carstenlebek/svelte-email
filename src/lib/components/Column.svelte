@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { styleToString } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
-	interface $$Props extends Omit<HTMLAttributes<HTMLDivElement>, 'style'> {
+	interface $$Props extends Omit<HTMLAttributes<HTMLTableCellElement>, 'style'> {
 		style?: Record<string, string | number | null>;
 	}
 
