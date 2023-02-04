@@ -28,7 +28,7 @@
 	const navbar = {
 		links: [
 			{ title: 'Docs', slug: '/docs', match: /\/docs/ },
-			{ title: 'Examples', slug: '/examples', match: /\/examples/ }
+			{ title: 'Examples', slug: '/docs/examples/airbnb-review', match: /\/examples/ }
 		]
 	};
 

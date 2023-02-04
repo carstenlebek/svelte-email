@@ -7,7 +7,7 @@ export const render = ({
 	options
 }: {
 	template: any;
-	props: Record<string, unknown>;
+	props?: Record<string, unknown>;
 	options?: {
 		plainText?: boolean;
 		pretty?: boolean;

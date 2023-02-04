@@ -1,20 +1,25 @@
 import { render } from '$lib';
-import Hello from '$lib/_examples/hello.svelte';
+import Email from './Email.svelte';
 
 export const prerender = true;
 
 export async function load() {
 	const html = render({
-		template: Hello,
-		props: {
-			name: 'World'
-		},
+		template: Email,
+		options: {
+			pretty: true
+		}
+	});
+
+	const plainText = render({
+		template: Email,
 		options: {
 			plainText: true
 		}
 	});
 
 	return {
-		html
+		html,
+		plainText
 	};
 }
