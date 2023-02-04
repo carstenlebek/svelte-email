@@ -14,6 +14,8 @@ import Text from './components/Text.svelte';
 
 import { render } from './render';
 
+import { styleToString } from './utils';
+
 export {
 	Body,
 	Button,
@@ -28,5 +30,6 @@ export {
 	Preview,
 	Section,
 	Text,
-	render
+	render,
+	styleToString
 };
