@@ -6,6 +6,7 @@ specifiers:
   '@sveltejs/kit': ^1.0.0
   '@sveltejs/package': ^1.0.0
   '@svelteness/kit-docs': ^1.1.1
+  '@types/gtag.js': ^0.0.12
   '@types/html-to-text': ^9.0.0
   '@types/pretty': ^2.0.1
   '@typescript-eslint/eslint-plugin': ^5.45.0
@@ -43,6 +44,7 @@ devDependencies:
   '@sveltejs/kit': 1.3.9_svelte@3.55.1+vite@4.0.4
   '@sveltejs/package': 1.0.2_4x7phaipmicbaooxtnresslofa
   '@svelteness/kit-docs': 1.1.1_svelte@3.55.1
+  '@types/gtag.js': 0.0.12
   '@types/html-to-text': 9.0.0
   '@types/pretty': 2.0.1
   '@typescript-eslint/eslint-plugin': 5.50.0_go4drrxstycfikanvu45pi4vgq
@@ -473,6 +475,10 @@ packages:
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
+    dev: true
+
+  /@types/gtag.js/0.0.12:
+    resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==}
     dev: true
 
   /@types/html-to-text/9.0.0:

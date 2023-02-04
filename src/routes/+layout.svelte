@@ -1,4 +1,6 @@
 <script>
+	import Analytics from '$lib/_docs/Analytics.svelte';
+
 	import '@svelteness/kit-docs/client/polyfills/index.js';
 	import '@svelteness/kit-docs/client/styles/normalize.css';
 	import '@svelteness/kit-docs/client/styles/fonts.css';
@@ -49,6 +51,7 @@
 		{/if}
 	{/key}
 </svelte:head>
+<Analytics />
 
 <div class="bg-red-500 w-40 h-40" />
 
