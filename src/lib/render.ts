@@ -1,19 +1,22 @@
 import { convert } from 'html-to-text';
 import pretty from 'pretty';
+import type { ComponentProps, ComponentType, SvelteComponent } from 'svelte';
 
-export const render = ({
+export const render = <Component extends SvelteComponent>({
 	template,
 	props,
 	options
 }: {
-	template: any;
-	props?: Record<string, unknown>;
+	template: ComponentType<Component>;
+	props?: ComponentProps<Component>;
 	options?: {
 		plainText?: boolean;
 		pretty?: boolean;
 	};
 }) => {
-	const { html } = template.render(props);
+	const { html } =
+		// @ts-ignore
+		template.render(props);
 	if (options?.plainText) {
 		return renderAsPlainText(html);
 	}
