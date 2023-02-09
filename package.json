@@ -17,8 +17,8 @@
 	},
 	"devDependencies": {
 		"@iconify-json/ri": "^1.1.4",
-		"@sveltejs/adapter-auto": "^1.0.0",
-		"@sveltejs/kit": "^1.0.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.5.0",
 		"@sveltejs/package": "^1.0.0",
 		"@svelteness/kit-docs": "^1.1.1",
 		"@types/gtag.js": "^0.0.12",
