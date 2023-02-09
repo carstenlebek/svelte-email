@@ -61,7 +61,7 @@
 			<div class="logo">
 				<a href="/" style="display: flex; align-items: center; width: fit-content; gap: .5rem;">
 					{@html SvelteLogo}
-					<span style="font-size: 2rem; display: inline;"> SVELTE EMAIL </span>
+					<span class="logo-text"> SVELTE EMAIL </span>
 				</a>
 			</div>
 		</div>
@@ -90,6 +90,13 @@
 	.logo :global(svg) {
 		height: 36px;
 		overflow: hidden;
+	}
+
+	.logo-text {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin-left: 0.5rem;
+		white-space: nowrap;
 	}
 
 	.socials {
