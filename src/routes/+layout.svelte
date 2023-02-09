@@ -59,7 +59,7 @@
 	<KitDocsLayout {navbar} {sidebar}>
 		<div slot="navbar-left">
 			<div class="logo">
-				<a href="/" style="display: flex; align-items: center; width: fit-content; gap: .5rem;">
+				<a href="/" style="">
 					{@html SvelteLogo}
 					<span class="logo-text"> SVELTE EMAIL </span>
 				</a>
@@ -77,18 +77,19 @@
 
 <style>
 	.logo {
-		display: flex;
-		align-items: center;
+		/* display: flex; */
+		/* align-items: center; */
 	}
 	.logo :global(a) {
 		color: rgb(var(--kd-color-inverse));
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		/* justify-content: center; */
 	}
 
 	.logo :global(svg) {
 		height: 36px;
+		width: 36px !important;
 		overflow: hidden;
 	}
 
