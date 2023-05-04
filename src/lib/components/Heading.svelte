@@ -19,6 +19,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 	export let as = 'h1';
 </script>
 
@@ -36,6 +38,7 @@
 		}),
 		...style
 	})}
+	class={className}
 	{...$$restProps}
 >
 	<slot />

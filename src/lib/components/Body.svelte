@@ -11,8 +11,10 @@
 	}
 
 	export let style = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 </script>
 
-<body {...$$restProps} style={styleToString(style)}>
+<body {...$$restProps} style={styleToString(style)} class={className} >
 	<slot />
 </body>

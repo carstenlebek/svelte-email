@@ -11,6 +11,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 
 	const styleDefaultTable = {
 		width: '100%',
@@ -32,6 +34,7 @@
 	cellSpacing={0}
 	role="presentation"
 	{...$$restProps}
+	class={className}
 >
 	<tbody>
 		<tr style={styleToString(styleDefaultTr)}>
