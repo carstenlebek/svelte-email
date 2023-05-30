@@ -13,6 +13,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 	export let target = '_blank';
 	export let href = '';
 
@@ -23,6 +25,6 @@
 	};
 </script>
 
-<a {...$$restProps} {href} {target} style={styleToString(styleDefault)}>
+<a {...$$restProps} {href} {target} style={styleToString(styleDefault)} class={className}>
 	<slot />
 </a>

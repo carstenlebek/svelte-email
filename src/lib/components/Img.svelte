@@ -15,6 +15,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 	export let alt = '';
 	export let src = '';
 	export let width = '0';
@@ -29,4 +31,4 @@
 	};
 </script>
 
-<img {alt} {src} {width} {height} style={styleToString(styleDefault)} {...$$restProps} />
+<img {alt} {src} {width} {height} style={styleToString(styleDefault)} {...$$restProps} class={className}/>

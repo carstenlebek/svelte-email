@@ -11,6 +11,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 
 	const styleDefault = {
 		display: 'inline-flex',
@@ -20,6 +22,6 @@
 	};
 </script>
 
-<td style={styleToString(styleDefault)} role="presentation" {...$$restProps}>
+<td style={styleToString(styleDefault)} role="presentation" {...$$restProps} class={className}>
 	<slot />
 </td>
