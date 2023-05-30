@@ -11,6 +11,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 
 	const styleDefault = {
 		width: '100%',
@@ -20,4 +22,4 @@
 	};
 </script>
 
-<hr style={styleToString(styleDefault)} {...$$restProps} />
+<hr style={styleToString(styleDefault)} {...$$restProps} class={className}/>

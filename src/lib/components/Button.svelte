@@ -16,6 +16,8 @@
 
 	export let href = '';
 	export let style = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 	export let pX = 0;
 	export let pY = 0;
 	export let target = '_blank';
@@ -55,7 +57,7 @@
 	};
 </script>
 
-<a {...$$restProps} {href} {target} style={styleToString(buttonStyle({ ...style, pX, pY }))}>
+<a {...$$restProps} {href} {target} style={styleToString(buttonStyle({ ...style, pX, pY }))} class={className}>
 	<span>
 		{@html `<!--[if mso]><i style="letter-spacing: ${pX}px;mso-font-width:-100%;mso-text-raise:${textRaise}" hidden>&nbsp;</i><![endif]-->`}
 	</span>

@@ -11,6 +11,8 @@
 	}
 
 	export let style: $$Props['style'] = {};
+	let className: string | undefined = undefined;
+	export { className as class };
 
 	const styleDefault = {
 		fontSize: '14px',
@@ -20,6 +22,6 @@
 	};
 </script>
 
-<p style={styleToString(styleDefault)} {...$$restProps}>
+<p style={styleToString(styleDefault)} {...$$restProps} class={className}>
 	<slot />
 </p>
