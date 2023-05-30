@@ -5,7 +5,7 @@
 Create a new email template in the `src/$lib/emails` directory:
 
 ```svelte title="src/$lib/emails/welcome.svelte"|copy
-<script>
+<script lang="ts">
 	import { Button, Container, Head, Hr, Html, Img, Preview, Section, Text } from 'svelte-email';
 
 	export let firstName = 'John';
