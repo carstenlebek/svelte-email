@@ -1,4 +1,5 @@
-import { convert } from 'html-to-text';
+import pkg from 'html-to-text';
+const { convert } = pkg;
 import pretty from 'pretty';
 import type { ComponentProps, ComponentType, SvelteComponent } from 'svelte';
 
