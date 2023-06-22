@@ -57,7 +57,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const emailHtml = render({
-	component: Hello,
+	template: Hello,
 	props: {
 		name: 'Svelte'
 	}
