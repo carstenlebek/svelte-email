@@ -44,7 +44,7 @@ import AWS from 'aws-sdk';
 AWS.config.update({ region: process.env.AWS_SES_REGION });
 
 const emailHtml = render({
-	component: Hello,
+	template: Hello,
 	props: {
 		name: 'Svelte'
 	}
