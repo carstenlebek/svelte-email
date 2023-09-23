@@ -16,7 +16,7 @@
 
 	export let href = '';
 	export let style = {};
-	let className: string | undefined = undefined;
+	export let className: string | undefined = undefined;
 	export { className as class };
 	export let pX = 0;
 	export let pY = 0;
@@ -55,6 +55,7 @@
 			msoTextRaise: pxToPt(paddingY.toString())
 		};
 	};
+
 </script>
 
 <a {...$$restProps} {href} {target} style={styleToString(buttonStyle({ ...style, pX, pY }))} class={className}>
