@@ -52,6 +52,6 @@
 		"jsdom": "^22.1.0",
 		"pretty": "^2.0.0",
 		"svelte": "^3.55.1",
-		"tw-to-css": "^0.0.11"
+		"tw-to-css": "github:steveninety/tw-to-css#module-bug-github"
 	}
 }
