@@ -11,8 +11,11 @@ import Link from './components/Link.svelte';
 import Preview from './components/Preview.svelte';
 import Section from './components/Section.svelte';
 import Text from './components/Text.svelte';
+import Row from './components/Row.svelte';
 
 import { render } from './render';
+
+import { createEmail } from './createEmail';
 
 import { styleToString } from './utils';
 
@@ -30,6 +33,8 @@ export {
 	Preview,
 	Section,
 	Text,
+	Row,
 	render,
+	createEmail,
 	styleToString
 };
