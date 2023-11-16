@@ -22,6 +22,6 @@
 	};
 </script>
 
-<td style={styleToString(styleDefault)} role="presentation" {...$$restProps} class={className}>
+<td style={styleToString(styleDefault)} role="row" {...$$restProps} class={className}>
 	<slot />
 </td>
