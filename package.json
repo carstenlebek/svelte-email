@@ -8,18 +8,94 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
+		"package": "svelte-kit sync && svelte-package && publint",
 		"docs:build": "svelte-kit sync && vite build",
-		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
+		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
+	"files": [
+		"dist",
+		"package.json",
+		"README.md"
+	],
+	"svelte": "./dist/index.js",
+	"main": "./dist/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		},
+		"./package.json": {
+			"default": "./package.json"
+		},
+		"./components/Body.svelte": {
+			"types": "./dist/components/Body.svelte.d.ts",
+			"svelte": "./dist/components/Body.svelte"
+		},
+		"./components/Column.svelte": {
+			"types": "./dist/components/Column.svelte.d.ts",
+			"svelte": "./dist/components/Column.svelte"
+		},
+		"./components/Container.svelte": {
+			"types": "./dist/components/Container.svelte.d.ts",
+			"svelte": "./dist/components/Container.svelte"
+		},
+		"./components/Head.svelte": {
+			"types": "./dist/components/Head.svelte.d.ts",
+			"svelte": "./dist/components/Head.svelte"
+		},
+		"./components/Heading.svelte": {
+			"types": "./dist/components/Heading.svelte.d.ts",
+			"svelte": "./dist/components/Heading.svelte"
+		},
+		"./components/Hr.svelte": {
+			"types": "./dist/components/Hr.svelte.d.ts",
+			"svelte": "./dist/components/Hr.svelte"
+		},
+		"./components/Html.svelte": {
+			"types": "./dist/components/Html.svelte.d.ts",
+			"svelte": "./dist/components/Html.svelte"
+		},
+		"./components/Img.svelte": {
+			"types": "./dist/components/Img.svelte.d.ts",
+			"svelte": "./dist/components/Img.svelte"
+		},
+		"./components/Link.svelte": {
+			"types": "./dist/components/Link.svelte.d.ts",
+			"svelte": "./dist/components/Link.svelte"
+		},
+		"./components/Preview.svelte": {
+			"types": "./dist/components/Preview.svelte.d.ts",
+			"svelte": "./dist/components/Preview.svelte"
+		},
+		"./components/Section.svelte": {
+			"types": "./dist/components/Section.svelte.d.ts",
+			"svelte": "./dist/components/Section.svelte"
+		},
+		"./components/Text.svelte": {
+			"types": "./dist/components/Text.svelte.d.ts",
+			"svelte": "./dist/components/Text.svelte"
+		},
+		"./render": {
+			"types": "./dist/render.d.ts",
+			"default": "./dist/render.js"
+		},
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"default": "./dist/utils.js"
+		}
+	},
+	"peerDependencies": {
+		"@sveltejs/kit": "^1.5.0 || ^2.0.0"
+	},
 	"devDependencies": {
 		"@iconify-json/ri": "^1.1.4",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
-		"@sveltejs/package": "^1.0.0",
+		"@sveltejs/package": "^2.2.5",
 		"@svelteness/kit-docs": "^1.1.1",
 		"@types/gtag.js": "^0.0.12",
 		"@types/html-to-text": "^9.0.0",
@@ -37,6 +113,7 @@
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
+		"publint": "^0.2.7",
 		"shiki": "^0.14.0",
 		"svelte-check": "^3.0.1",
 		"tailwindcss": "^3.2.4",
